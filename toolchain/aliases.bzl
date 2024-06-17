@@ -27,4 +27,6 @@ aliased_tools = [
     "llvm-cov",
     "llvm-profdata",
     "llvm-symbolizer",
+    "clang-tidy.exe",
+    "clang-format.exe",
 ]

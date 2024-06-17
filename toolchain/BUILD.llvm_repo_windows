@@ -78,20 +78,20 @@ filegroup(
 
 filegroup(
     name = "ar",
-    srcs = ["bin/llvm-ar"],
+    srcs = ["bin/llvm-ar.exe"],
 )
 
 filegroup(
     name = "as",
     srcs = [
-        "bin/clang",
-        "bin/llvm-as",
+        "bin/clang.exe",
+        "bin/llvm-as.exe",
     ],
 )
 
 filegroup(
     name = "nm",
-    srcs = ["bin/llvm-nm"],
+    srcs = ["bin/llvm-nm.exe"],
 )
 
 filegroup(
@@ -136,10 +136,5 @@ filegroup(
 
 filegroup(
     name = "clang-tidy",
-    srcs = ["bin/clang-tidy"],
-)
-
-filegroup(
-    name = "clang-tidy.exe",
     srcs = ["bin/clang-tidy.exe"],
 )

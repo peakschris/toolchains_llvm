@@ -296,7 +296,11 @@ def llvm_repo_impl(rctx):
 
     rctx.file(
         "BUILD.bazel",
-        content = rctx.read(Label("//toolchain:BUILD.llvm_repo")),
+        content = rctx.read(Label(select(
+            {
+                "@bazel_tools//src/conditions:windows_x64": "//toolchain:BUILD.llvm_repo_windows",
+                "//conditions:default": "//toolchain:BUILD.llvm_repo",
+            }))),
         executable = False,
     )
 
