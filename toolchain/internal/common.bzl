@@ -104,7 +104,7 @@ def os(rctx):
 
     name = rctx.attr.exec_os
     if name:
-        if name in ("linux", "darwin"):
+        if name in ("linux", "darwin", "windows"):
             return name
         else:
             fail("Unsupported value for exec_os: %s" % name)
